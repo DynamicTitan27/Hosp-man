@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hospital Appointment</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <form id="appForm">
+    <input type="text" id="patientId" placeholder="PID-XXXX" required>
+    <input type="text" id="patientName" placeholder="Patient Name" required>
+    <input type="number" id="patientAge" placeholder="Age" required min="1" max="120">
+    <select id="department" required>
+      <option value="">Select Department</option>
+      <option value="Cardiology">Cardiology</option>
+      <option value="Neurology">Neurology</option>
+      <option value="General">General</option>
+    </select>
+    <input type="date" id="appointmentDate" required>
+    <button type="submit">Submit</button>
+  </form>
+  <br>
+  <span id="status" style="color:red">Form is Incomplete</span>
+  <h2>Today's Appointments</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Dept</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody id="appTable"></tbody>
+  </table>
+  <script src="js/script.js"></script>
+</body>
+</html>
